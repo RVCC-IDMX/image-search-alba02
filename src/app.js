@@ -40,7 +40,7 @@ form.addEventListener('submit', async (event) => {
 
     let clone = template.content.cloneNode(true);
 
-    const dataObj = response.results[0];
+    const dataObj = element;
     const postImg = clone.querySelector('.post__img');
     postImg.src = dataObj.urls.small;
     postImg.alt = dataObj.alt_description;
@@ -65,7 +65,7 @@ form.addEventListener('submit', async (event) => {
 
     if(description !== null && description.length>100){
       description = description.substring(0,97) +'...'
-      description.innerText = description;
+      postDesc.innerText = description;
     }
 
 
